@@ -13,8 +13,8 @@ import MintUI from "mint-ui"
 import "mint-ui/lib/style.css"
 Vue.use(MintUI);
 
-
-
+import "./font/iconfont.css"
+import 'normalize.css/normalize.css'
 const router = new VueRouter({
   routes,
   mode:"history"
