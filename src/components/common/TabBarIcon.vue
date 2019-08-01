@@ -1,7 +1,6 @@
 <template>
   <div>
-<!--    <img :src="focused?selectedImage:normalImage" class="iconStyle">-->
-    <i :class="focused?selectedIcon:normalIcon" class="iconfont"></i>
+    <img :src="focused?selectedIcon:normalIcon" class="iconStyle">
   </div>
 </template>
 <script>
@@ -21,5 +20,8 @@
   }
 </script>
 <style scoped>
-
+.iconStyle{
+  width: 30px;
+  height: 30px;
+}
 </style>
