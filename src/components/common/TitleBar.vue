@@ -37,7 +37,8 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background-color: #f00;
+    /*后期：渐变*/
+    background-color: #e8e8f5;
     height: 40px;
     padding: 0 7px;
     color: #2f2f2f;

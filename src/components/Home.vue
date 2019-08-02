@@ -6,14 +6,15 @@
       city="深圳"
     ></titlebar>
     <!--    面板组件-->
+    <mt-tab-container v-model="selected">
+      <mt-tab-container-item id="1">
+        <filmcomment></filmcomment>
+      </mt-tab-container-item>
+    </mt-tab-container>
+
 
 
     <!--底部导航条-->
-<!--    <mt-tabbar v-model="active" fixed>-->
-<!--      <mt-tab-item id="film" @click.native="changeStatus(0)">-->
-<!--        <tabbaricon></tabbaricon>-->
-<!--      </mt-tab-item>-->
-<!--    </mt-tabbar>-->
     <mt-tabbar v-model="selected">
       <mt-tab-item id="1">
         <tabbaricon
@@ -58,13 +59,14 @@
 <script>
   import TitleBar from "./common/TitleBar";
   import TabBarIcon from "./common/TabBarIcon";
+  import FilmComment from "./Film/FilmComment";
 
   export default {
     data(){
       return {
         selected: "1",
         value: "",
-        active:"",
+        active:"1",
         icons: {
           "1": ["../assets/images/film.png", "../assets/images/film_.png"],
           "2": ["../assets/images/ticket.png", "../assets/images/ticket_.png"],
@@ -82,12 +84,12 @@
     },
     components: {
       "titlebar":TitleBar,
-      "tabbaricon":TabBarIcon
+      "tabbaricon":TabBarIcon,
+      "filmcomment":FilmComment,
+
     }
   }
 </script>
 <style scoped>
-  .focused {
-    color:red;
-  }
+
 </style>
