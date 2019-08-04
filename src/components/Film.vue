@@ -98,9 +98,6 @@
     },
     components: {
       TitleBar: TitleBar
-    },
-    created() {
-
     }
   }
 </script>
@@ -110,6 +107,7 @@
     display: none;
   }
   .film-main {
+    margin-top: 50px;
     margin-bottom: 57px;
   }
   .hot-title {
@@ -202,7 +200,8 @@
   }
   .p-image {
     width: 360px;
-    margin: 0 15px;
+    margin-left: 15px;
+    margin-right: 30px;
   }
   .p-img1 {
     width: 200px;
@@ -210,7 +209,7 @@
     object-fit: cover;
   }
   .p-img2 {
-    width: 32%;
+    width: 30%;
     height: 115px;
     margin-right: 3px;
     object-fit: cover;

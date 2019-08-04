@@ -8,7 +8,7 @@
         <app-film></app-film>
       </mt-tab-container-item>
       <mt-tab-container-item id="2">
-        购票
+        <app-buy-ticket></app-buy-ticket>
       </mt-tab-container-item>
       <mt-tab-container-item id="4">
         榜单
@@ -62,9 +62,9 @@
 
 <script>
   import TabBarIcon from "./common/TabBarIcon";
-  import Film from "./Film"
-  import Mine from "./Mine"
-
+  import Film from "./Film";
+  import Mine from "./Mine";
+  import BuyTicket from "./BuyTicket";
 
   export default {
     data(){
@@ -82,7 +82,8 @@
     components: {
       tabbaricon: TabBarIcon,
       appFilm: Film,
-      appMine:Mine
+      appMine: Mine,
+      appBuyTicket: BuyTicket,
     },
     created() {
 
