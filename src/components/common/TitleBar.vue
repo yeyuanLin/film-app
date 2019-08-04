@@ -1,18 +1,35 @@
 <template>
-  <div class="site-head">
-    <!--    固定头部-->
-    <i class="iconfont icon-back"></i>
-    <span>{{filmTitle}}</span>
-    <div class="right-head">
-      <div class="icondiv city" >
-        {{city}}
+  <div class="header">
+
+<!--  <mt-header :title="title" fixed>-->
+<!--    <router-link to="/" slot="left">-->
+<!--      <mt-button>-->
+<!--        <img src="../../assets/images/lyy.jpg">-->
+<!--      </mt-button>-->
+<!--    </router-link>-->
+<!--    &lt;!&ndash; <mt-button icon="search" slot="right"></mt-button>&ndash;&gt;-->
+<!--    <mt-button class="city" slot="right">-->
+<!--      深圳-->
+<!--      <span class="iconfont icon-xiangxia"></span>-->
+<!--    </mt-button>-->
+<!--    <mt-button class="iconfont icon-sousuo" slot="right"></mt-button>-->
+<!--  </mt-header>-->
+
+    <div class="pix">
+      <img src="../../assets/images/lyy.jpg">
+    </div>
+    <div class="title">
+      {{title}}
+    </div>
+    <div class="header-right">
+      <div class="city">
+        深圳
         <i class="iconfont icon-xiangxia"></i>
       </div>
-      <div class="icondiv search" style="margin-right: 20px">
+      <div class="search">
         <i class="iconfont icon-sousuo"></i>
       </div>
     </div>
-
   </div>
 </template>
 <script>
@@ -23,45 +40,42 @@
       }
     },
     props: {
-      filmTitle:{default:""},
-      city:{default:""},
+      title:{default:""},
 
     }
   }
 </script>
 <style scoped>
-  .site-head {
+  .header {
+    height: 50px;
     display: flex;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
-    /*后期：渐变*/
-    background-color: #e8e8f5;
-    height: 40px;
-    padding: 0 7px;
-    color: #2f2f2f;
-    font-size: 14px;
-    margin-right: 30px;
+    margin: 0 10px;
   }
-  .right-head {
+  .pix {
+    width: 50px;
+  }
+  .pix img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  .header-right {
     display: flex;
   }
-  .icondiv {
-    display: flex;
-    /*垂直居中*/
-    align-items: center;
-    height: 48px;
+  .title {
+    width: 50px;
+  }
+  .city {
+    line-height: 50px;
+    font-size: 12px;
   }
   .icon-xiangxia {
     font-size: 12px;
   }
-  .city {
-    font-size: 8px;
-    margin-right: 8px;
-  }
   .search {
-    margin-right: 20px;
+    margin-left: 10px;
+    line-height: 50px;
   }
 </style>

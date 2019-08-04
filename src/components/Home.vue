@@ -19,7 +19,7 @@
     </mt-tab-container>
 
     <!--底部导航条-->
-    <mt-tabbar v-model="selected">
+    <mt-tabbar v-model="selected" fixed>
       <mt-tab-item id="1">
         <tabbaricon
           :selectedIcon="require('../assets/images/film_.png')"
