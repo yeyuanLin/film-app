@@ -14,7 +14,7 @@
         榜单
       </mt-tab-container-item>
       <mt-tab-container-item id="5">
-        我的
+        <app-mine></app-mine>
       </mt-tab-container-item>
     </mt-tab-container>
 
@@ -63,6 +63,8 @@
 <script>
   import TabBarIcon from "./common/TabBarIcon";
   import Film from "./Film"
+  import Mine from "./Mine"
+
 
   export default {
     data(){
@@ -80,6 +82,7 @@
     components: {
       tabbaricon: TabBarIcon,
       appFilm: Film,
+      appMine:Mine
     },
     created() {
 
