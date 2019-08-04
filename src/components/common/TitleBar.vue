@@ -1,25 +1,17 @@
 <template>
   <div class="header">
-
-<!--  <mt-header :title="title" fixed>-->
-<!--    <router-link to="/" slot="left">-->
-<!--      <mt-button>-->
-<!--        <img src="../../assets/images/lyy.jpg">-->
-<!--      </mt-button>-->
-<!--    </router-link>-->
-<!--    &lt;!&ndash; <mt-button icon="search" slot="right"></mt-button>&ndash;&gt;-->
-<!--    <mt-button class="city" slot="right">-->
-<!--      深圳-->
-<!--      <span class="iconfont icon-xiangxia"></span>-->
-<!--    </mt-button>-->
-<!--    <mt-button class="iconfont icon-sousuo" slot="right"></mt-button>-->
-<!--  </mt-header>-->
-
     <div class="pix">
       <img src="../../assets/images/lyy.jpg">
     </div>
     <div class="title">
-      {{title}}
+      <span v-if="typeof(title)=='string'">
+        {{title}}
+      </span>
+      <div v-else class="title-button">
+        <button :class="active?'active-button':'no-active-button'" @click="buttonClick(true)">{{title[0]}}</button>
+        <button :class="!active?'active-button':'no-active-button'" @click="buttonClick(false)">{{title[1]}}</button>
+      </div>
+
     </div>
     <div class="header-right">
       <div class="city">
@@ -36,7 +28,13 @@
   export default {
     data(){
       return {
-
+        active: true
+      }
+    },
+    methods: {
+      buttonClick(sign) {
+        this.active=sign;
+        this.$emit("changeContent", sign);
       }
     },
     props: {
@@ -47,14 +45,20 @@
 </script>
 <style scoped>
   .header {
+    position: fixed;
+    top: 0;
+    background-color: #FAFAFA;
+    z-index: 999;
+    width: 100%;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 10px;
+    border-bottom: 1px solid #E0E0E0;
   }
   .pix {
-    width: 50px;
+    margin-left: 10px;
+    width: 70px;
   }
   .pix img {
     width: 35px;
@@ -62,10 +66,33 @@
     border-radius: 50%;
   }
   .header-right {
+    margin-right: 10px;
     display: flex;
   }
-  .title {
-    width: 50px;
+  .title span{
+    width: 70px;
+    text-align: center;
+  }
+  .title-button {
+    width: 130px;
+    height: 35px;
+    border: 1px solid #FFAB00;
+  }
+  .title-button button {
+    width: 65px;
+    height: 35px;
+    float: left;
+    font-size: 14px;
+    border: 0;
+    outline: none;
+  }
+  .active-button {
+    color: #F5F5F5;
+    background-color: #FFAB00;
+  }
+  .no-active-button {
+    color: #FFAB00;
+    background-color: #F5F5F5;
   }
   .city {
     line-height: 50px;
