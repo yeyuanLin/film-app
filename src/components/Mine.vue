@@ -113,7 +113,7 @@
     align-items: center;
     height: 30px;
     /*margin-top: 5px;*/
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #E0E0E0;
 
   }
   .command-film {
@@ -127,8 +127,8 @@
 
   }
   .tuijianImg {
-    width: 88px;
-    height: 115px;
+    width: 75px;
+    height: 105px;
   }
 
   .film-name {
