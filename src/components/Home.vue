@@ -1,21 +1,25 @@
 <template>
   <div>
     <!--    1.固定头部-->
-    <titlebar
-      filmTitle="电影"
-      city="深圳"
-    ></titlebar>
+
     <!--    面板组件-->
     <mt-tab-container v-model="selected">
       <mt-tab-container-item id="1">
-        <filmcomment></filmcomment>
+        <app-film></app-film>
+      </mt-tab-container-item>
+      <mt-tab-container-item id="2">
+        <app-buy-ticket></app-buy-ticket>
+      </mt-tab-container-item>
+      <mt-tab-container-item id="4">
+        榜单
+      </mt-tab-container-item>
+      <mt-tab-container-item id="5">
+        <app-mine></app-mine>
       </mt-tab-container-item>
     </mt-tab-container>
 
-
-
     <!--底部导航条-->
-    <mt-tabbar v-model="selected">
+    <mt-tabbar v-model="selected" fixed>
       <mt-tab-item id="1">
         <tabbaricon
           :selectedIcon="require('../assets/images/film_.png')"
@@ -57,22 +61,15 @@
 </template>
 
 <script>
-  import TitleBar from "./common/TitleBar";
   import TabBarIcon from "./common/TabBarIcon";
-  import FilmComment from "./Film/FilmComment";
+  import Film from "./Film";
+  import Mine from "./Mine";
+  import BuyTicket from "./BuyTicket";
 
   export default {
     data(){
       return {
         selected: "1",
-        value: "",
-        active:"1",
-        icons: {
-          "1": ["../assets/images/film.png", "../assets/images/film_.png"],
-          "2": ["../assets/images/ticket.png", "../assets/images/ticket_.png"],
-          "4": ["../assets/images/ranking.png", "../assets/images/ranking_.png"],
-          "5": ["../assets/images/mine.png", "../assets/images/mine_.png"]
-        }
       }
     },
     methods: {
@@ -83,13 +80,18 @@
       }
     },
     components: {
-      "titlebar":TitleBar,
-      "tabbaricon":TabBarIcon,
-      "filmcomment":FilmComment,
+      tabbaricon: TabBarIcon,
+      appFilm: Film,
+      appMine: Mine,
+      appBuyTicket: BuyTicket,
+    },
+    created() {
 
     }
   }
 </script>
 <style scoped>
-
+  .focused {
+    color:red;
+  }
 </style>
