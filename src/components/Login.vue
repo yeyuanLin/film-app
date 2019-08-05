@@ -1,18 +1,15 @@
 <template>
   <div class="site-login">
+
     <div class="head-bar">
       <i class="iconfont icon-back"></i>
       <span>帮助</span>
     </div>
     <h4 class="please">请输入账号密码</h4>
-    <mt-field class="field-control" type="text" :placeholder="unameholder" v-model="uname"></mt-field>
-    <mt-field class="field-control" type="password" :placeholder="upwdholder" v-model="upwd"></mt-field>
+    <mt-field label="" placeholder="手机号/邮箱"></mt-field>
+    <mt-field label="" placeholder="输入密码" type="password"></mt-field>
     <mt-button class="login-btn uname-login" type="primary" size="large" @click="login">登录</mt-button>
     <mt-button class="login-btn msg-login" size="large" @click="login">用短信验证登录</mt-button>
-<!--    <div class="foot-bar">-->
-<!--      <span>用短信验证码登录</span>-->
-<!--      <span>忘记密码</span>-->
-<!--    </div>-->
   </div>
 </template>
 <script>
@@ -23,6 +20,7 @@
         upwd:"",
         unameholder:"手机号或者邮箱",
         upwdholder:"请输入登录密码"
+
       }
     },
     methods:{
@@ -73,4 +71,5 @@
     border:1px solid #FFCE44;
     color:#FFCE44;
   }
+
 </style>
