@@ -29,7 +29,7 @@
         <div class="command-film">
           <div class="command-film-item" v-for="(item,i) in 4" :key="i">
             <img class="tuijianImg" :src="require('../assets/images/nz.jpg')">
-            <div class="film-name">哪吒之魔童降世 {{item}}</div>
+            <div class="film-name">哪吒 {{item}}</div>
           </div>
         </div>
     </div>
@@ -63,12 +63,12 @@
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100%;
-    height: 170px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
+    color:#616161;
   }
 
   .app-mine .headImg{
@@ -87,7 +87,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 35px;
+    height: 40px;
+  }
+  .file-mine div {
+    display: flex;
+    align-items: center;
   }
   .gray {
     height: 10px;
@@ -97,30 +101,35 @@
     width: 20px;
     height: 20px;
     line-height: 1.5;
+    margin-right: 10px;
   }
 
   .sep {
-    color: #e0e0e0;
+    color: #f5f5f5;
   }
   .more {
     text-decoration: none;
+    font-size: 12px;
+    color: #919191;
   }
 
   .command {
     display: flex;
     flex-direction: column;
     padding:0 15px;
-    font-size:12px;
     background-color: #fff;
+
 
   }
   .tuijian {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 30px;
+    height: 35px;
     /*margin-top: 5px;*/
     border-bottom: 1px solid #E0E0E0;
+    font-size:15px;
+    color:#616161;
 
   }
   .command-film {
@@ -134,15 +143,18 @@
 
   }
   .tuijianImg {
-    width: 75px;
-    height: 105px;
+    width: 80px;
+    height: 110px;
   }
 
   .film-name {
-    font-size: 14px;
+    text-align: center;
+    font-size: 15px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    margin-top: 8px;
+    color: #424242;
   }
 </style>
 

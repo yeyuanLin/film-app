@@ -72,26 +72,19 @@
         selected: "1",
       }
     },
-    methods: {
-      changeState(id) {
-        if (id){
-
-        }
-      }
-    },
     components: {
       tabbaricon: TabBarIcon,
       appFilm: Film,
       appMine: Mine,
       appBuyTicket: BuyTicket,
     },
-    created() {
-
+    watch:{
+      'selected': function(newVal,oldVal){
+        if(newVal=="3"){
+          this.$router.push({name:'writeLink'});
+        }
+      },
     }
+
   }
 </script>
-<style scoped>
-  .focused {
-    color:red;
-  }
-</style>

@@ -11,12 +11,7 @@
           <i>
             {{'哪吒之魔童降世'}}
           </i>
-          <div>
-            <mt-badge color="#FE9120">
-              92%
-              <span style="font-size: 12px"> 推荐度</span>
-            </mt-badge>
-          </div>
+          <span class="want" style="font-size: 12px"><b>92%</b>&nbsp;推荐度</span>
         </div>
         <div class="film-actor">
           动画
@@ -77,6 +72,13 @@
     display: block;
     float: left;
   }
+  .want {
+    color: #FE9120;
+    font-size: 12px;
+  }
+  .want b {
+    font-size: 16px;
+  }
   .film-title div {
     float: left;
   }
@@ -113,6 +115,7 @@
     background-color: #FFD740;
     border: 0;
     outline: none;
+    border-radius: 2px;
   }
   .buy-button div {
     display: flex;

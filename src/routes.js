@@ -8,5 +8,5 @@ import WriteComment from './components/WriteComment.vue'
 export const routes = [
   {path: "/", name: "homeLink", component: Home},
   {path: "/Login", name: "loginLink", component: Login},
-  {path: "/WriteComment", name: "loginLink", component: WriteComment},
+  {path: "/WriteComment", name: "writeLink", component: WriteComment},
 ]
