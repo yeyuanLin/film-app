@@ -17,14 +17,14 @@
       </div>
     </div>
 
-
+    <div class="gray"></div>
     <div class="command">
         <div class="tuijian">
           <span>推荐的电影</span>
-          <router-link to="#">
+          <div>
             <span class="more">更多</span>
             <i class="iconfont"></i>
-          </router-link>
+          </div>
         </div>
         <div class="command-film">
           <div class="command-film-item" v-for="(item,i) in 4" :key="i">
@@ -56,7 +56,7 @@
 </script>
 <style scoped>
   .app-mine {
-    background-color: #F3F1F4;
+    background-color: #f1f1f3;
   }
   .mine-head {
     background-image: url("../assets/images/bg.jpg");
@@ -83,10 +83,15 @@
   }
 
   .file-mine {
+    background-color: #fff;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 35px;
+  }
+  .gray {
+    height: 10px;
+    background-color: #f1f1f3;
   }
   .iconImg{
     width: 20px;
@@ -100,11 +105,13 @@
   .more {
     text-decoration: none;
   }
+
   .command {
     display: flex;
     flex-direction: column;
-    margin:0 15px;
+    padding:0 15px;
     font-size:12px;
+    background-color: #fff;
 
   }
   .tuijian {
