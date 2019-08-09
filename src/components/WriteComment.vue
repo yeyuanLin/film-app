@@ -1,5 +1,6 @@
 <template>
   <div class="writeComment">
+    <titlebar></titlebar>
     <div class="search">
       <div class="searchbar">
         <div class="searchbar-inner">
@@ -56,11 +57,16 @@
   </div>
 </template>
 <script>
+  import TitleBar from "./common/TitleBar";
+
   export default {
     data(){
       return {
         value:"",
       }
+    },
+    components: {
+      titlebar: TitleBar
     }
   }
 </script>
@@ -72,6 +78,7 @@
   .search {
     height: 50px;
     overflow: hidden;
+    margin-top: 50px;
   }
   .searchbar {
     display: flex;

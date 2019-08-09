@@ -3,7 +3,7 @@
     <div class="film-box" v-for="(item, index) in 10" :key="index">
       <!-- 电影图 -->
       <div class="film-pix">
-        <img src="../../assets/images/nz.jpg">
+        <img src="../../assets/images/nz.jpg"/>
       </div>
       <!-- 电影信息 -->
       <div class="film-info">
